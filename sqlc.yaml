@@ -1,0 +1,10 @@
+version: "2"
+sql:
+  - engine: "postgresql"
+    queries: "./database/query"
+    schema: "./database/migrate"
+    gen:
+      go:
+        package: "repo"
+        out: "./internal/repo"
+        emit_interface: true
